@@ -36,6 +36,7 @@ window.onload = async () => {
     }>
   ][] = [
     ["triangle", () => import("./pages/triangle")],
+    ["cube", () => import("./pages/cube")],
     ["instanced cube", () => import("./pages/instanced-cube")],
   ];
   menus.forEach(([name, data]) => {
