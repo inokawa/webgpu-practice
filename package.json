@@ -1,0 +1,26 @@
+{
+  "name": "webgpu-practice",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tsc": "tsc -p . --noEmit"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "vite": "^3.0.8"
+  },
+  "author": "inokawa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inokawa/webgpu-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/inokawa/webgpu-practice/issues"
+  },
+  "homepage": "https://github.com/inokawa/webgpu-practice#readme"
+}
