@@ -28,12 +28,20 @@ window.onload = async () => {
   const menuEl = document.getElementById("menu")!;
   const menus: [
     string,
-    () => Promise<{ init: (gl: GPUCanvasContext) => Promise<() => void> }>
-  ][] = [["triangle", () => import("./pages/triangle")]];
+    () => Promise<{
+      init: (
+        gl: GPUCanvasContext,
+        canvas: HTMLCanvasElement
+      ) => Promise<() => void>;
+    }>
+  ][] = [
+    ["triangle", () => import("./pages/triangle")],
+    ["instanced cube", () => import("./pages/instanced-cube")],
+  ];
   menus.forEach(([name, data]) => {
     appendMenu(menuEl, name, async () => {
       dispose?.();
-      dispose = await (await data()).init(ctx);
+      dispose = await (await data()).init(ctx, canvas);
     });
   });
   (menuEl.children[menuEl.children.length - 1] as HTMLElement).click();
