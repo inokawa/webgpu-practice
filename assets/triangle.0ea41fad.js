@@ -1,4 +1,4 @@
-import{r as s}from"./index.5389b9e6.js";const d=`@vertex
+import{r as s}from"./index.ee58b084.js";const d=`@vertex
 fn main(
   @builtin(vertex_index) VertexIndex : u32
 ) -> @builtin(position) vec4<f32> {
